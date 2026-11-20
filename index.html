@@ -161,11 +161,6 @@ footer a { color: inherit; }
 
   <div class="card">
     <h2>四正点实况（02 / 08 / 14 / 20 时）</h2>
-    <div class="range" id="pointRangeBar">
-      <button data-n="7" class="on">近 7 天</button>
-      <button data-n="30">近 30 天</button>
-      <button data-n="0">全部</button>
-    </div>
     <div class="sub">温度 / 相对湿度 / 风速为 CMA 实况（官方），紫外线指数为 Open-Meteo 小时模型值；AQI 及污染物为 cnEMC 城市小时值（官方，air.cnemc.cn）。9/20 当日气象四正点为模型回填（见数据源标注）。风向、能见度、1h/24h 降水见 met_points.csv</div>
     <div class="hourlegend" id="hourLegend"></div>
     <div class="grid6" id="pointGrid"></div>
@@ -173,7 +168,7 @@ footer a { color: inherit; }
 
   <div class="card">
     <h2>正点实况明细（02 / 08 / 14 / 20 时）</h2>
-    <div class="sub">逐时次一览：气象（CMA 实况，紫外线为 Open-Meteo 模型值）+ AQI 及六项浓度（cnEMC 官方城市小时值）；模型回填值见数据源列。显示范围与上方「四正点实况」的选择一致</div>
+    <div class="sub">逐时次一览：气象（CMA 实况，紫外线为 Open-Meteo 模型值）+ AQI 及六项浓度（cnEMC 官方城市小时值）；模型回填值见数据源列。显示范围与顶部范围选择一致</div>
     <div style="overflow-x:auto" id="pointTableWrap"></div>
   </div>
 
@@ -273,11 +268,10 @@ footer a { color: inherit; }
     renderAll();
   });
 
-  /* 正点数据（四正点实况 + 正点实况明细）独立范围：近7天/近30天/全部 */
-  var pointRangeN = 7;
+  /* 正点数据（四正点实况 + 正点实况明细）跟随顶部统一范围选择 */
   function pointDate0() {
-    if (!pointRangeN) return "";
-    var from = dates.length - pointRangeN;
+    if (!rangeN) return "";
+    var from = dates.length - rangeN;
     if (from < 0) from = 0;
     return dates[from];
   }
@@ -285,14 +279,6 @@ footer a { color: inherit; }
     var d0 = pointDate0();
     return d0 ? pts.filter(function (p) { return p.date >= d0; }) : pts;
   }
-  var pbar = $("#pointRangeBar");
-  pbar.addEventListener("click", function (e) {
-    var b = e.target.closest("button"); if (!b) return;
-    pointRangeN = +b.dataset.n;
-    pbar.querySelectorAll("button").forEach(function (x) { x.classList.toggle("on", x === b); });
-    renderPoints();
-    renderPointTable();
-  });
 
   /* ---------- 主题 ---------- */
   function applyTheme(t) {
