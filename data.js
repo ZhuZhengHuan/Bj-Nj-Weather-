@@ -1,6 +1,6 @@
 /* 由 render_dashboard.py 自动生成，勿手改 */
 window.AQI_DATA = {
- "generated": "2026-11-21 01:23",
+ "generated": "2026-11-21 01:46",
  "sources": [
   "cnEMC城市日报(官方)",
   "https://www.aqistudy.cn/historydata/daydata.php?city=北京&month=202609",
@@ -4394,7 +4394,7 @@ window.AQI_DATA = {
    "rain": null,
    "weather": "晴",
    "wind": "微风",
-   "uv": null,
+   "uv": 2.8,
    "src": "中国天气网(CMA官方)"
   },
   {
