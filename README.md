@@ -36,4 +36,4 @@ python3 weather_collect.py --nowait
 python3 render_dashboard.py
 ```
 
-仅使用 Python 标准库，无第三方依赖。
+依赖：仅 Python 标准库（HTTPS 证书优先用 certifi，无则回退系统 CA 库）。

@@ -42,12 +42,16 @@ import time
 import urllib.request
 from datetime import date, datetime, timedelta
 
-# python.org 版 Python 默认不带 CA 证书，显式指定证书库
+# CA 证书库：优先 certifi（macOS python.org 版 / GitHub Actions 均可用），
+# 其次 macOS 系统证书，最后回退系统默认（Linux 发行版自带 CA 库）
 try:
     import certifi
     SSL_CTX = ssl.create_default_context(cafile=certifi.where())
 except ImportError:
-    SSL_CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem")
+    try:
+        SSL_CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem")
+    except (FileNotFoundError, OSError):
+        SSL_CTX = ssl.create_default_context()
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW_DIR = os.path.join(HERE, "raw")
