@@ -117,10 +117,12 @@ svg .val { fill: var(--ink); font-size: 11px; font-weight: 600; }
 
 /* 折叠统计表（默认收起） */
 .collapse-card { padding: 18px 26px; }
-.collapse-head { display: flex; align-items: center; gap: 12px; cursor: pointer; }
-.collapse-head h2 { margin: 0; justify-content: flex-start; text-align: left; }
+.collapse-head { display: flex; align-items: center; justify-content: center; gap: 12px;
+  cursor: pointer; position: relative; }
+.collapse-head h2 { margin: 0; justify-content: center; text-align: center; }
 .collapse-btn { border: 1px solid var(--line-2); background: var(--card); color: var(--accent);
-  border-radius: 999px; padding: 3px 14px; font-size: var(--fs-s); cursor: pointer; }
+  border-radius: 999px; padding: 3px 14px; font-size: var(--fs-s); cursor: pointer;
+  position: absolute; right: 0; }
 .collapsed .collapse-body { display: none; }
 
 /* 表格（统一的横向滚动容器） */
@@ -235,7 +237,6 @@ footer a { color: var(--accent); }
   <div class="card collapse-card collapsed" id="tableCard">
     <div class="collapse-head" id="collapseHead">
       <h2>统计明细表</h2>
-      <span class="spacer"></span>
       <button class="collapse-btn" id="collapseBtn">展开 ▸</button>
     </div>
     <div class="collapse-body" id="collapseBody">
