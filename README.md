@@ -1,6 +1,6 @@
 # 北京 · 南京 空气质量与气象数据看板
 
-在线看板：<https://mobiushuan-commits.github.io/bj-nj-data-/>
+在线看板：<https://zhuzhenghuan.github.io/bj-nj-data-/>
 
 由 GitHub Actions 定时在线采集（不依赖任何本地机器），每 3 小时运行一次，采集后自动提交数据并刷新页面。
 
