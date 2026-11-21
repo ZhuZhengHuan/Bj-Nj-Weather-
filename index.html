@@ -50,9 +50,8 @@ a:hover { text-decoration: underline; }
 ::selection { background: var(--accent-soft); }
 
 /* 头部：主标题（大字）+ 主题模式（小字，显示当前模式） */
-header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
 h1 { font-size: var(--fs-l); font-weight: 700; margin: 0; letter-spacing: -.3px; }
-header .spacer { flex: 1; }
 .theme-btn { border: none; background: var(--accent); color: #fff;
   border-radius: 999px; padding: 5px 15px; font-size: var(--fs-s); font-weight: 500; cursor: pointer;
   transition: opacity .15s; }
@@ -74,7 +73,7 @@ header .spacer { flex: 1; }
 .kpi .sub { color: var(--ink-2); font-size: var(--fs-s); margin-top: 12px; }
 
 /* 分类选项（小字） */
-.range { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.range { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 18px; }
 .range button { border: 1px solid var(--line-2); background: var(--card); color: var(--ink-2);
   border-radius: 999px; padding: 5px 18px; font-size: var(--fs-s); font-weight: 500; cursor: pointer;
   transition: border-color .15s, color .15s; }
@@ -164,7 +163,6 @@ footer a { color: var(--accent); }
 <div class="wrap">
   <header>
     <h1>北京·南京气象看板</h1>
-    <span class="spacer"></span>
     <button class="theme-btn" id="themeBtn">☀️ 浅色模式</button>
   </header>
   <p class="intro">本站收集了 2026.9.1 以来的北京、南京两城的气象数据，有最为关键的空气质量数据 AQI、有六项污染物的数据、还有天气气象数据，统计节点分为逐日统计和逐六小时统计。由朱郑桓与 Visual Studio Code 共同制作。</p>
