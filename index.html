@@ -140,9 +140,10 @@ tbody tr:hover td { background: var(--accent-soft); }
 footer { margin-top: 40px; color: var(--ink-2); font-size: var(--fs-s); line-height: 2; text-align: center; }
 footer a { color: var(--accent); }
 
-/* 结语（大字） */
+/* 版本号（小字）与结语（大字） */
+.ver { text-align: center; font-size: var(--fs-s); color: var(--ink-3); margin-top: 52px; }
 .thanks { text-align: center; font-size: var(--fs-l); font-weight: 700; letter-spacing: 2px;
-  margin: 72px 0 24px; color: var(--ink); }
+  margin: 12px 0 24px; color: var(--ink); }
 
 /* 响应式 */
 @media (max-width: 860px) { .grid6 { grid-template-columns: 1fr 1fr; } .kpis { grid-template-columns: 1fr; } }
@@ -233,7 +234,7 @@ footer a { color: var(--accent); }
   <div class="card collapse-card collapsed" id="tableCard">
     <div class="collapse-head" id="collapseHead">
       <h2>统计明细表</h2>
-      <button class="collapse-btn" id="collapseBtn">展开 ▸</button>
+      <button class="collapse-btn" id="collapseBtn">展开 ▾</button>
     </div>
     <div class="collapse-body" id="collapseBody">
       <div id="dailyTables">
@@ -253,6 +254,7 @@ footer a { color: var(--accent); }
   </div>
 
   <footer id="foot"></footer>
+  <div class="ver">版本4.1</div>
   <div class="thanks">谢谢</div>
 </div>
 
@@ -363,7 +365,7 @@ footer a { color: var(--accent); }
   /* ---------- 统计明细表：默认收起，点击标题行展开/收起 ---------- */
   function setCollapsed(c) {
     $("#tableCard").classList.toggle("collapsed", c);
-    $("#collapseBtn").textContent = c ? "展开 ▸" : "收起 ▾";
+    $("#collapseBtn").textContent = c ? "展开 ▾" : "收起 ▴";
   }
   $("#collapseHead").addEventListener("click", function () {
     setCollapsed(!$("#tableCard").classList.contains("collapsed"));
