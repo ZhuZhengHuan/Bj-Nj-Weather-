@@ -1,6 +1,6 @@
 /* 由 render_dashboard.py 自动生成，勿手改 */
 window.AQI_DATA = {
- "generated": "2026-11-27 09:42",
+ "generated": "2026-11-27 20:07",
  "sources": [
   "cnEMC城市日报(官方)",
   "https://www.aqistudy.cn/historydata/daydata.php?city=北京&month=202609",
@@ -4716,8 +4716,8 @@ window.AQI_DATA = {
    "tmin": -1.0,
    "rhmin": 0.0,
    "rain": null,
-   "weather": "晴转多云",
-   "wind": "西北风3-4级转微风",
+   "weather": "晴",
+   "wind": "西北风4-5级转微风",
    "uv": 2.6,
    "src": "中国天气网(CMA官方)"
   },
@@ -4728,8 +4728,8 @@ window.AQI_DATA = {
    "tmin": 7.0,
    "rhmin": 40.0,
    "rain": null,
-   "weather": "多云转晴",
-   "wind": "微风",
+   "weather": "晴转多云",
+   "wind": "西北风3-4级转微风",
    "uv": 3.7,
    "src": "中国天气网(CMA官方)"
   }
@@ -14024,6 +14024,40 @@ window.AQI_DATA = {
   },
   {
    "date": "2026-11-27",
+   "city": "北京",
+   "hour": "14",
+   "temp": 9.2,
+   "rh": 20.0,
+   "winddir": "西北风",
+   "windspeed": 19.6,
+   "pressure": null,
+   "vis": null,
+   "rain1h": null,
+   "rain24h": null,
+   "weather": "晴",
+   "uv": 2.2,
+   "obstime": "",
+   "src": "Open-Meteo模型(小时值)"
+  },
+  {
+   "date": "2026-11-27",
+   "city": "北京",
+   "hour": "20",
+   "temp": 7.3,
+   "rh": 23.0,
+   "winddir": "北风",
+   "windspeed": 13.0,
+   "pressure": 1017.0,
+   "vis": 30.0,
+   "rain1h": 0.0,
+   "rain24h": 0.0,
+   "weather": "晴",
+   "uv": 0.0,
+   "obstime": "20261127 19:50",
+   "src": "中国天气网实况(CMA官方)；紫外线:Open-Meteo模型"
+  },
+  {
+   "date": "2026-11-27",
    "city": "南京",
    "hour": "02",
    "temp": 10.0,
@@ -14055,6 +14089,40 @@ window.AQI_DATA = {
    "uv": 0.4,
    "obstime": "",
    "src": "Open-Meteo模型(小时值)"
+  },
+  {
+   "date": "2026-11-27",
+   "city": "南京",
+   "hour": "14",
+   "temp": 18.1,
+   "rh": 36.0,
+   "winddir": "西北风",
+   "windspeed": 11.7,
+   "pressure": null,
+   "vis": null,
+   "rain1h": null,
+   "rain24h": null,
+   "weather": "阴",
+   "uv": 2.6,
+   "obstime": "",
+   "src": "Open-Meteo模型(小时值)"
+  },
+  {
+   "date": "2026-11-27",
+   "city": "南京",
+   "hour": "20",
+   "temp": 13.1,
+   "rh": 35.0,
+   "winddir": "西风",
+   "windspeed": 4.0,
+   "pressure": 1018.0,
+   "vis": 14.0,
+   "rain1h": 0.0,
+   "rain24h": 0.0,
+   "weather": "晴",
+   "uv": 0.0,
+   "obstime": "20261127 19:50",
+   "src": "中国天气网实况(CMA官方)；紫外线:Open-Meteo模型"
   }
  ],
  "pointSources": [
@@ -23209,6 +23277,23 @@ window.AQI_DATA = {
   },
   {
    "date": "2026-11-27",
+   "city": "北京",
+   "hour": "14",
+   "aqi": 19.0,
+   "level": "优",
+   "color": "#00E400",
+   "primary": "—",
+   "pm25": 2.0,
+   "pm10": 7.0,
+   "so2": 2.0,
+   "no2": 5.0,
+   "co": 0.2,
+   "o3": 59.0,
+   "obstime": "2026-11-27 14:00",
+   "src": "cnEMC城市小时值(官方)"
+  },
+  {
+   "date": "2026-11-27",
    "city": "南京",
    "hour": "02",
    "aqi": 53.0,
@@ -23239,6 +23324,23 @@ window.AQI_DATA = {
    "co": 0.8,
    "o3": 36.0,
    "obstime": "2026-11-27 08:00",
+   "src": "cnEMC城市小时值(官方)"
+  },
+  {
+   "date": "2026-11-27",
+   "city": "南京",
+   "hour": "14",
+   "aqi": 79.0,
+   "level": "良",
+   "color": "#FFFF00",
+   "primary": "颗粒物(PM10)",
+   "pm25": 20.0,
+   "pm10": 90.0,
+   "so2": 6.0,
+   "no2": 15.0,
+   "co": 0.5,
+   "o3": 95.0,
+   "obstime": "2026-11-27 14:00",
    "src": "cnEMC城市小时值(官方)"
   }
  ],
